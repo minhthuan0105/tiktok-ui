@@ -25,6 +25,8 @@ import { Wrapper as PopperWrapper } from '~/components/Popper';
 import AccountItem from '~/components/AccountItem';
 import Menu from '~/components/Popper/Menu';
 import { faUser } from '@fortawesome/free-regular-svg-icons';
+import Image from '~/components/Images';
+// import { UploadIcon } from '~/components/Icons';
 
 const cx = classNames.bind(styles);
 
@@ -136,6 +138,7 @@ function Header() {
                             <Tippy delay={[0, 200]} content="Upload video" placement="bottom">
                                 <button className={cx('action-btn')}>
                                     <FontAwesomeIcon icon={faCloudArrowUp} />
+                                    {/* <UploadIcon /> */}
                                 </button>
                             </Tippy>
                         </>
@@ -147,7 +150,7 @@ function Header() {
                     )}
                     <Menu items={currentUser ? userMenu : MENU_ITEMS} onChange={handleMenuChange}>
                         {currentUser ? (
-                            <img
+                            <Image
                                 className={cx('user-avatar')}
                                 src="https://p16-sign-va.tiktokcdn.com/tos-useast2a-avt-0068-giso/ae161d8c2699ae43a4e1e1f1422cb1f0~c5_720x720.jpeg?x-expires=1660168800&x-signature=FIRblRFo1jHFR3SnCwUD8Tb4vIY%3D"
                                 alt=""
